@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class Evento {
 
     @NotNull(message="Se requiere id")
-    int id;
+    Integer id;
 
     @NotBlank(message="Se requiere nombre del evento")
     String nombre;
@@ -24,12 +24,12 @@ public class Evento {
     String tipo;
 
     @NotNull(message="Se requiere fecha del evento")
-    int fecha;
+    Integer fecha;
 
     @NotBlank(message="Se requiere ubicacion del evento")
     String ubicacion;
 
     @NotNull(message="Se requiere cantidad de participantes")
-    int participantes;
+    Integer participantes;
     
 }

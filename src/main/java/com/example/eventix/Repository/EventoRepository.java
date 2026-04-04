@@ -83,7 +83,7 @@ public class EventoRepository {
     }
 
     public List<Evento> buscarPorUbicacion(String ubicacion){
-        return eventos.stream().filter(evento->evento.getTipo().equals(ubicacion))
+        return eventos.stream().filter(evento->evento.getUbicacion().equals(ubicacion))
             .collect(Collectors.toList());
     }
 
@@ -104,8 +104,8 @@ public class EventoRepository {
 
         int posicion = 0;
         for(Evento tmp_evento: eventos){
-            if(tmp_evento.getId() == evento.getId()){
-                eventos.add(posicion, evento);
+            if(tmp_evento.getId().equals( evento.getId())){
+                eventos.set(posicion, evento);
                 return evento;
             }
             posicion++;    
